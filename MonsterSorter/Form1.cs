@@ -70,6 +70,7 @@ namespace MonsterSorter
                 
                 if (dr == DialogResult.Yes)
                 {
+                    monsterOutput.Text = $"{nameInput.Text} removed from list.";
                     monsterList.Remove(monsterList[index]);
                 }
             }
@@ -148,11 +149,6 @@ namespace MonsterSorter
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            //Search global list “Monsters” for monster with same name as name input box
-            //If monster exists
-            //Display monster attributes in output
-            //Else
-            //Return error message - “Monster not found”
             int index = monsterList.FindIndex(n => n.name == nameInput.Text);
 
             if (index >= 0)
@@ -168,7 +164,6 @@ namespace MonsterSorter
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //TODO Save all objects in global list “Monsters” to xml file “Saved Monsters”
             List<string> saveList = new List<string>();
 
             foreach (Monster mon in monsterList)
