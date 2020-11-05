@@ -47,7 +47,9 @@ namespace MonsterSorter
             else
             {
                 monsterOutput.Text = "Invalid Input.";
+                //TODO replace with popup box
             }
+            //TODO return error if monster already exists
         }
 
         private void removeMonsterButton_Click(object sender, EventArgs e)
@@ -63,6 +65,7 @@ namespace MonsterSorter
             else
             {
                 monsterOutput.Text = "Monster not found.";
+                //TODO replace with popup box
             }
         }
 
@@ -79,6 +82,7 @@ namespace MonsterSorter
                 else
                 {
                     monsterOutput.Text = "Monster is already that type.";
+                    //TODO replace with popup box
                 }
             }
         }
@@ -143,6 +147,11 @@ namespace MonsterSorter
             if (index >= 0)
             {
                 monsterOutput.Text = $"{monsterList[index].name}\n{monsterList[index].type}";
+            }
+            else
+            {
+                monsterOutput.Text = "Monster not found.";
+                //TODO replace with popup box
             }
         }
 
