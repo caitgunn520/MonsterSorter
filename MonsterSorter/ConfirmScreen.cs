@@ -32,10 +32,11 @@ namespace MonsterSorter
             confirmScreen.Close();
         }
 
-        public static DialogResult Show()
+        public static DialogResult Show(string monName)
         {
             confirmScreen = new ConfirmScreen();
 
+            confirmScreen.confirmText.Text = $"Are you sure you want to delete {monName}?";
             confirmScreen.ShowDialog();
             return deleteTrue;
         }

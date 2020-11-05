@@ -66,7 +66,7 @@ namespace MonsterSorter
 
             if (index >= 0)
             {
-                DialogResult dr = ConfirmScreen.Show();
+                DialogResult dr = ConfirmScreen.Show(nameInput.Text);
                 
                 if (dr == DialogResult.Yes)
                 {
