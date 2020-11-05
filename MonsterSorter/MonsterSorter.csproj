@@ -52,6 +52,12 @@
     <Compile Include="ConfirmScreen.Designer.cs">
       <DependentUpon>ConfirmScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorScreen.Designer.cs">
+      <DependentUpon>ErrorScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ConfirmScreen.resx">
       <DependentUpon>ConfirmScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorScreen.resx">
+      <DependentUpon>ErrorScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

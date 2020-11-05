@@ -49,14 +49,12 @@ namespace MonsterSorter
                 }
                 else
                 {
-                    monsterOutput.Text = $"{nameInput.Text} already exists.";
-                    //TODO replace with popup box
+                    ErrorScreen.ShowError("monExists");
                 }
             }
             else
             {
-                monsterOutput.Text = "Invalid Input.";
-                //TODO replace with popup box
+                ErrorScreen.ShowError("badInput");
             }
         }
 
@@ -76,8 +74,7 @@ namespace MonsterSorter
             }
             else
             {
-                monsterOutput.Text = "Monster not found.";
-                //TODO replace with popup box
+                ErrorScreen.ShowError("monNotFound");
             }
         }
 
@@ -93,8 +90,7 @@ namespace MonsterSorter
                 }
                 else
                 {
-                    monsterOutput.Text = "Monster is already that type.";
-                    //TODO replace with popup box
+                    ErrorScreen.ShowError("alreadyThatType");
                 }
             }
         }
@@ -157,8 +153,7 @@ namespace MonsterSorter
             }
             else
             {
-                monsterOutput.Text = "Monster not found.";
-                //TODO replace with popup box
+                ErrorScreen.ShowError("monNotFound");
             }
         }
 
