@@ -61,6 +61,7 @@ namespace MonsterSorter
                 //Return confirmation box - “Are you sure you want to 
                 //delete [monster name]?
                 //If yes Delete that monster
+                DialogResult dr = ConfirmScreen.Show();
             }
             else
             {
