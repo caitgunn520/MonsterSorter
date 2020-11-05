@@ -36,20 +36,28 @@ namespace MonsterSorter
             if (nameInput.Text != "" && typeInput.Text != "")
             { 
                 string monName, monType;
+                int index = monsterList.FindIndex(n => n.name == nameInput.Text);
 
-                monName = nameInput.Text;
-                monType = (string)typeInput.SelectedItem;
+                if (index == -1)
+                {
+                    monName = nameInput.Text;
+                    monType = (string)typeInput.SelectedItem;
 
-                Monster newMon = new Monster(monName, monType);
-                monsterList.Add(newMon);
-                monsterOutput.Text = $"{monName} successfully added.";
+                    Monster newMon = new Monster(monName, monType);
+                    monsterList.Add(newMon);
+                    monsterOutput.Text = $"{monName} successfully added.";
+                }
+                else
+                {
+                    monsterOutput.Text = $"{nameInput.Text} already exists.";
+                    //TODO replace with popup box
+                }
             }
             else
             {
                 monsterOutput.Text = "Invalid Input.";
                 //TODO replace with popup box
             }
-            //TODO return error if monster already exists
         }
 
         private void removeMonsterButton_Click(object sender, EventArgs e)
@@ -58,10 +66,12 @@ namespace MonsterSorter
 
             if (index >= 0)
             {
-                //Return confirmation box - “Are you sure you want to 
-                //delete [monster name]?
-                //If yes Delete that monster
                 DialogResult dr = ConfirmScreen.Show();
+                
+                if (dr == DialogResult.Yes)
+                {
+                    monsterList.Remove(monsterList[index]);
+                }
             }
             else
             {
