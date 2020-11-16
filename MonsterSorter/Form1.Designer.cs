@@ -42,6 +42,11 @@
             this.showWater = new System.Windows.Forms.Button();
             this.showFire = new System.Windows.Forms.Button();
             this.showAir = new System.Windows.Forms.Button();
+            this.typeOutput = new System.Windows.Forms.Label();
+            this.roleOutput = new System.Windows.Forms.Label();
+            this.techOutput = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.roleInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +89,7 @@
             // 
             // addMonsterButton
             // 
-            this.addMonsterButton.Location = new System.Drawing.Point(37, 222);
+            this.addMonsterButton.Location = new System.Drawing.Point(37, 270);
             this.addMonsterButton.Name = "addMonsterButton";
             this.addMonsterButton.Size = new System.Drawing.Size(85, 23);
             this.addMonsterButton.TabIndex = 4;
@@ -94,7 +99,7 @@
             // 
             // removeMonsterButton
             // 
-            this.removeMonsterButton.Location = new System.Drawing.Point(142, 222);
+            this.removeMonsterButton.Location = new System.Drawing.Point(142, 269);
             this.removeMonsterButton.Name = "removeMonsterButton";
             this.removeMonsterButton.Size = new System.Drawing.Size(98, 23);
             this.removeMonsterButton.TabIndex = 5;
@@ -104,7 +109,7 @@
             // 
             // changeTypeButton
             // 
-            this.changeTypeButton.Location = new System.Drawing.Point(37, 269);
+            this.changeTypeButton.Location = new System.Drawing.Point(37, 299);
             this.changeTypeButton.Name = "changeTypeButton";
             this.changeTypeButton.Size = new System.Drawing.Size(85, 38);
             this.changeTypeButton.TabIndex = 6;
@@ -114,7 +119,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(142, 268);
+            this.searchButton.Location = new System.Drawing.Point(142, 298);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(98, 39);
             this.searchButton.TabIndex = 7;
@@ -128,7 +133,7 @@
             this.monsterOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monsterOutput.Location = new System.Drawing.Point(328, 51);
             this.monsterOutput.Name = "monsterOutput";
-            this.monsterOutput.Size = new System.Drawing.Size(261, 286);
+            this.monsterOutput.Size = new System.Drawing.Size(92, 286);
             this.monsterOutput.TabIndex = 8;
             // 
             // showAllButton
@@ -181,11 +186,57 @@
             this.showAir.UseVisualStyleBackColor = true;
             this.showAir.Click += new System.EventHandler(this.showAir_Click);
             // 
+            // typeOutput
+            // 
+            this.typeOutput.BackColor = System.Drawing.Color.White;
+            this.typeOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.typeOutput.Location = new System.Drawing.Point(418, 51);
+            this.typeOutput.Name = "typeOutput";
+            this.typeOutput.Size = new System.Drawing.Size(95, 286);
+            this.typeOutput.TabIndex = 14;
+            // 
+            // roleOutput
+            // 
+            this.roleOutput.BackColor = System.Drawing.Color.White;
+            this.roleOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roleOutput.Location = new System.Drawing.Point(512, 51);
+            this.roleOutput.Name = "roleOutput";
+            this.roleOutput.Size = new System.Drawing.Size(92, 286);
+            this.roleOutput.TabIndex = 15;
+            // 
+            // techOutput
+            // 
+            this.techOutput.Location = new System.Drawing.Point(34, 359);
+            this.techOutput.Name = "techOutput";
+            this.techOutput.Size = new System.Drawing.Size(206, 61);
+            this.techOutput.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(37, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Monster Role";
+            // 
+            // roleInput
+            // 
+            this.roleInput.Location = new System.Drawing.Point(125, 194);
+            this.roleInput.Name = "roleInput";
+            this.roleInput.Size = new System.Drawing.Size(120, 20);
+            this.roleInput.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.roleInput);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.techOutput);
+            this.Controls.Add(this.roleOutput);
+            this.Controls.Add(this.typeOutput);
             this.Controls.Add(this.showAir);
             this.Controls.Add(this.showFire);
             this.Controls.Add(this.showWater);
@@ -224,6 +275,11 @@
         private System.Windows.Forms.Button showWater;
         private System.Windows.Forms.Button showFire;
         private System.Windows.Forms.Button showAir;
+        private System.Windows.Forms.Label typeOutput;
+        private System.Windows.Forms.Label roleOutput;
+        private System.Windows.Forms.Label techOutput;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox roleInput;
     }
 }
 

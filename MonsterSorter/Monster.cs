@@ -8,12 +8,13 @@ namespace MonsterSorter
 {
     class Monster
     {
-        public string name, type;
+        public string name, type, role;
 
-        public Monster(string _name, string _type)
+        public Monster(string _name, string _type, string _role)
         {
             name = _name;
             type = _type;
+            role = _role;
         }
     }
 }
