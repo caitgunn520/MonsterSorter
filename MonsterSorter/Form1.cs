@@ -97,6 +97,33 @@ namespace MonsterSorter
                     ErrorScreen.ShowError("alreadyThatType");
                 }
             }
+            else
+            {
+                ErrorScreen.ShowError("monNotFound");
+            }
+        }
+
+        private void changeRoleButton_Click(object sender, EventArgs e)
+        {
+            int index = monsterList.FindIndex(n => n.name == nameInput.Text);
+
+            if (index >= 0)
+            {
+                if (monsterList[index].role != roleInput.Text)
+                {
+                    monsterList[index].role = roleInput.Text;
+                    techOutput.Text = $"{monsterList[index].name}'s role is now " +
+                        $"{roleInput.Text}.";
+                }
+                else
+                {
+                    ErrorScreen.ShowError("alreadyThatRole");
+                }
+            }
+            else
+            {
+                ErrorScreen.ShowError("monNotFound");
+            }
         }
 
         private void showAllButton_Click(object sender, EventArgs e)
@@ -186,5 +213,7 @@ namespace MonsterSorter
 
             File.WriteAllLines("SavedMonsters.txt", saveList);
         }
+
+        
     }
 }

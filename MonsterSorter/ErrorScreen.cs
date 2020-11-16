@@ -39,6 +39,10 @@ namespace MonsterSorter
                     errorScreen.errorOutput.Text = "The monster you are trying to edit " +
                         "is already that type.";
                     break;
+                case "alreadyThatRole":
+                    errorScreen.errorOutput.Text = "The monster you are trying to edit " +
+                        "already has that role.";
+                    break;
                 default:
                     errorScreen.errorOutput.Text = "You shouldn't be receiving this " +
                         "message.";

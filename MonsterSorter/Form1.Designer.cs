@@ -47,6 +47,7 @@
             this.techOutput = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.roleInput = new System.Windows.Forms.TextBox();
+            this.changeRoleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -119,7 +120,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(142, 298);
+            this.searchButton.Location = new System.Drawing.Point(142, 224);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(98, 39);
             this.searchButton.TabIndex = 7;
@@ -227,11 +228,22 @@
             this.roleInput.Size = new System.Drawing.Size(120, 20);
             this.roleInput.TabIndex = 18;
             // 
+            // changeRoleButton
+            // 
+            this.changeRoleButton.Location = new System.Drawing.Point(142, 301);
+            this.changeRoleButton.Name = "changeRoleButton";
+            this.changeRoleButton.Size = new System.Drawing.Size(98, 36);
+            this.changeRoleButton.TabIndex = 19;
+            this.changeRoleButton.Text = "Change Monster Role";
+            this.changeRoleButton.UseVisualStyleBackColor = true;
+            this.changeRoleButton.Click += new System.EventHandler(this.changeRoleButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.changeRoleButton);
             this.Controls.Add(this.roleInput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.techOutput);
@@ -280,6 +292,7 @@
         private System.Windows.Forms.Label techOutput;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox roleInput;
+        private System.Windows.Forms.Button changeRoleButton;
     }
 }
 
