@@ -58,7 +58,7 @@
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.errorOutput);
             this.Name = "ErrorScreen";
-            this.Text = "ErrorScreen";
+            this.Text = "Error";
             this.ResumeLayout(false);
 
         }

@@ -87,6 +87,8 @@ namespace MonsterSorter
                 if (monsterList[index].type != typeInput.SelectedItem.ToString())
                 {
                     monsterList[index].type = typeInput.SelectedItem.ToString();
+                    monsterOutput.Text = $"{monsterList[index].name}'s type is now " +
+                        $"{typeInput.SelectedItem}";
                 }
                 else
                 {
