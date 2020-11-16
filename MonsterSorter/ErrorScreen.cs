@@ -22,7 +22,7 @@ namespace MonsterSorter
         public static void ShowError(string errorReason)
         {
             errorScreen = new ErrorScreen();
-            
+
             switch (errorReason)
             {
                 case "badInput":
